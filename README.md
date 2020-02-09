@@ -25,6 +25,12 @@ python3 generator.py -f "juan" -l "sanchez perez" -o juan.lst -v
 
 
 
+![example][example]
+
+[example]: example.png
+
+
+
 # Docker
 
 
