@@ -129,10 +129,14 @@ class Generator():
                     logger.debug(f'{usename}')
             # Eliminamos los duplicados se los usuarios
             content = '\n'.join(list(set(aux)))
-            Path(output).write_text(content)
+            logger.debug(str(output))
+            # if os.access(str(output), os.R_OK):
+            Path(output).write_text(content, encoding='utf-8')
             logger.info(f'File {str(output)} generated.')
+            # else:
+            #    logger.critical(f'Permission denied: {str(output)}')
         else:
-            logger.error(f'The username list is empty.')
+            logger.error(f'The username list is empty')
 
 
 def main():
