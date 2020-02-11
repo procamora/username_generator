@@ -17,5 +17,4 @@ RUN pip install -r requirements.txt
 
 RUN mkdir ./output
 
-# python3 generator.py -f "juan antonio" -l "flores caba" -o juan.lst -v
 CMD [ "python", "./generator.py", "-f", "juan antonio", "-l", "flores caba", "-o", "output/test.lst", "-v"]

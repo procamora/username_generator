@@ -36,7 +36,7 @@ def create_arg_parser() -> argparse:
 
     response: argparse = my_parser.parse_args()
     if response.first is None or response.last is None:
-        logger.critical('first and last arguments are necessary.')
+        print('first and last arguments are necessary.\n')
         my_parser.print_help()
         sys.exit(-1)
 
